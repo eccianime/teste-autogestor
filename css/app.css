@@ -1,0 +1,223 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(../fonts/Roboto.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(../fonts/Roboto-2.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html,body{
+	font-family: 'Roboto';
+}
+
+html{
+	background-image: url(../img/officePattern.jpg);
+    animation: 90s scroll infinite linear;
+	height: 100%;
+	width: 100%;
+}
+
+.center{
+	margin: 10% auto;
+}
+
+.white-box{
+	background-color: white;
+	padding: 40px;
+	border-radius: 30px;
+	box-shadow: 4px 4px 8px black;
+	margin: 10px;
+	position: relative;
+	max-width: 90%;
+}
+
+.icon-big{
+	font-size: 80px;
+}
+
+.icon-mid{
+	font-size: 40px;
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+
+.link{
+	text-decoration: none;
+	color: black;
+}
+
+.link div:hover{
+	box-shadow: 4px 4px 4px white, -4px -4px 4px white, 4px -4px 4px white, -4px 4px 4px white;
+}
+
+.link div:active{
+	background-color: #0d47a1;
+	box-shadow: 4px 4px 8px #0d47a1;
+	color: white;
+}
+
+.linkers{
+	font-size: 40px;
+}
+
+.title{
+	font-size: 30px;
+}
+
+table{
+	margin-top: 20px;
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+table td{
+	padding: 10px;	
+}
+
+table tbody tr:hover{
+	background-color: #aaa;
+}
+
+.table-head{
+	color: white;
+	background-color: black;
+	font-weight: bold;	
+}
+
+.link-back{
+	margin-left: 40px;
+	border: 1px solid black;
+	padding: 5px 20px;
+	border-radius: 40px;
+	position: absolute;
+	left: 0px;
+	font-size: 20px;
+}
+
+.overlay{
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	overflow: hidden;
+	background: white;
+	left: 0px;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay h1{
+	text-align: center;
+}
+
+.spin{
+	-webkit-animation:la-spin 2s linear infinite;
+	animation:la-spin 2s linear infinite
+}
+
+.fade{
+	opacity: 0;
+	-webkit-animation-duration:1s;
+	-webkit-animation-name:fadeout;
+	animation-duration:1s;
+	animation-name:fadeout
+}
+
+.panel-add{
+	margin-top: 20px;
+}
+
+.panel-add input,
+.panel-add select{
+	border: 1px solid black;
+	padding: 10px;
+	margin: 10px 0px;
+	border-radius: 30px;
+}
+
+.panel-add input{
+	width: 90%;
+}
+
+.panel-add select{
+	width: 95%
+}
+
+.panel-add a{
+	background: green;
+	color: white;
+	width: 95%;
+	display: block;
+	border-radius: 30px;
+	text-decoration: none;
+	padding: 10px;
+	margin: 10px 0px;
+}
+
+table tbody tr:hover td.button-erase,
+table tbody tr:hover td.button-edit{
+	text-shadow: 2px 0px 4px white, 0px 2px 4px white, -2px 0px 4px white, 0px -2px 4px white;
+}
+
+.button-erase{
+	text-decoration: none;
+	font-size: 20px;
+	color: red;
+	margin: 0px 20px;
+	border-radius: 20px;
+}
+
+.button-edit{
+	text-decoration: none;
+	font-size: 20px;
+	color: orange;
+	margin: 0px 20px;
+	border-radius: 20px;
+}
+
+.search-input{
+	position: absolute;
+	right: 40px;
+	border: 1px solid black;
+	padding: 12px;
+	border-radius: 30px;
+	font-size: 12px;
+}
+
+@keyframes scroll{
+	100%{
+		background-position:2000px 2000px
+	}
+}
+
+
+@keyframes la-spin{
+	0%
+	{
+		-webkit-transform:rotate(0deg);
+		transform:rotate(0deg)
+	}
+	to
+	{
+		-webkit-transform:rotate(1turn);
+		transform:rotate(1turn)
+	}
+}
+
+@keyframes fadeout{
+	from{
+		opacity:1
+	}to{
+		opacity:0
+	}
+}
